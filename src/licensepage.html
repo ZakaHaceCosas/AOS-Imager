@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./components/css/main.css">
-  <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+  <link rel="stylesheet" href="./components/css/licensepage.css" />
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,24 +14,36 @@
 </head>
 
 <body>
-
-  <div class="drag">
-  </div>
-
-  <header>
-    <div class="title">
-        <img src="./components/images/titlelogo.png" height="20px" class="titlelogo" />
-        &nbsp; &nbsp;
-        <p>AvdanOS Imager</p>
-      </div>
-    <div class="buttons">
-      <button id="minBtn" href="" class="btn"><img src="./components/images/minimize.svg" height="15px"></button>
-      <button id="closeBtn" href="" class="btn"><img src="./components/images/close.svg" height="16px"></button>
-    </div>
-  </header>
+   <!-- Drag region -->
+   <div class="drag" id="drag"></div>
+   <header>
+     <!-- The window controls -->
+     <div class="buttons" id="buttons">
+       <!-- Minimise button -->
+       <button id="minBtn" href="" class="btn">
+         <img src="./components/images/minimize.svg" height="15px" />
+       </button>
+       <!-- Close button -->
+       <button id="closeBtn" href="" class="btn">
+         <img src="./components/images/close.svg" height="16px" />
+       </button>
+     </div>
+     <!-- Window Title -->
+     <div class="title" id="title">
+       <img src="./components/images/titlelogo.png" height="20px" class="titlelogo" />
+       &nbsp; &nbsp;
+       <p>AvdanOS Imager</p>
+     </div>
+   </header>
   <main>
+    <!-- Page Title -->
     <div class="licensetxt"><h1>License</h1></div>
-    <div id="license"><p><iframe src="license.html" class="licenseiframe" width="640px" height="250px" frameborder=0 style="border-radius: 6px;"></iframe></p></div>
+    <div id="license">
+      <!-- Iframe containing the licensing information -->
+      <p>
+        <iframe src="license.html" class="licenseiframe" width="640px" height="250px" frameborder=0 style="border-radius: 6px;"></iframe>
+      </p>
+    </div>
   </main>
   <footer>
     <div class="left">
@@ -47,7 +59,8 @@
     </div>
   </footer>
   <script src="./components/js/renderer.js"></script>
-  <script src="./components/js/licenserpc.js"></script>
+  <!-- Discord RPC Region, please put all scripts above -->
+  <script src="./components/js/RPC/license.js"></script>
 </body>
 
 </html>

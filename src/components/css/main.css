@@ -77,19 +77,6 @@ header {
   cursor: pointer;
 }
 
-.avdanostxtlogo {
-  color: white;
-  font-size: xx-large;
-}
-
-.avdanostxtlogo h1 {
-  margin-bottom: 0em;
-}
-
-.avdanostxtlogodescription p {
-  font-size: 125%;
-  font-weight: 500;
-}
 
 footer {
   position: absolute;
@@ -140,56 +127,8 @@ footer button:hover {
   color: var(--feature); */
 }
 
-.licensetxt {
-  font-size: x-large;
-  margin-bottom: -20px;
-}
 
-.disagree {
-  right: 345px !important;
-}
 
-.avdanosflashlogo {
-  margin-bottom: 25px;
-}
-
-.drive {
-  margin-right: 300px;
-  margin-bottom: -50px;
-}
-
-.iso {
-  margin-left: 300px;
-}
-
-.drivedropdown {
-  margin-top: 15px;
-  margin-right: 300px;
-  margin-bottom: -20px;
-}
-
-.isodropdown {
-  margin-left: 300px;
-}
-
-.logomaintxt {
-  margin-bottom: -12px;
-}
-
-#bar-container {
-  width: 400px;
-  height: 25px;
-  background-color: hsla(0, 0%, 12%, 1);
-  border-radius: 12px;
-}
-
-#bar {
-  width: 0;
-  height: 100%;
-  background-color: hsla(334, 100%, 59%, 1);
-  transition: width 0.2s;
-  border-radius: 12px;
-}
 
 body.is-loaded {
  transition: all 1s;
@@ -224,11 +163,3 @@ body.is-loaded {
   display: flex;
 }
 
-.licenseiframe {
-  opacity: 0.6;
-  scrollbar-width: thin;
-}
-
-.licenseiframe::-webkit-scrollbar {
-  background: rgba(31, 31, 31, 0.8);
-}

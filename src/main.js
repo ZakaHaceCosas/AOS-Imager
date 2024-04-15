@@ -2,10 +2,9 @@
 const { app, ipcMain, BrowserWindow, globalShortcut } = require("electron");
 const path = require("path");
 
-
-
 function createWindow() {
-  // Create the browser window.
+  // Create the application window with some spicey attributes that
+  // I'm not gonna comment. :D
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
@@ -21,24 +20,18 @@ function createWindow() {
       contextIsolation: false,
       enableRemoteModule: true,
     },
-    icon: "./src/components/images/icon.png",
+    icon: "./components/images/icon.png",
   });
 
   // Position the macOS traffic lights into a more natural position
   mainWindow.setTrafficLightPosition({ x: 18, y: 18 });
-  
-  mainWindow.setTitle(require('../package.json').productName);
 
+  mainWindow.setTitle(require("../package.json").productName);
   mainWindow.loadFile("./src/index.html");
-
   return mainWindow;
 }
 
-
-
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
+// Adding the IPC hook for window manipulation.
 app.whenReady().then(() => {
   const imagerWindow = createWindow();
   ipcMain.on("close", () => {
@@ -48,6 +41,9 @@ app.whenReady().then(() => {
     imagerWindow.minimize();
   });
 
+  // Blocking keybinds which shouldn't be triggered by the end user.
+  // Works by re-registering the keybinds to console output
+  // instead of the expected action.
   app.on("browser-window-focus", function () {
     /*globalShortcut.register("CommandOrControl+R", () => {
       console.log("CommandOrControl+R is pressed: Reloading disabled");
@@ -76,6 +72,8 @@ app.whenReady().then(() => {
     });*/
   });
 
+  // When the app loses focus, we want to re-register the keybinds back, 
+  // so they perform the expected actions again.
   app.on("browser-window-blur", function () {
     /*globalShortcut.unregister('CommandOrControl+R');*/
     globalShortcut.unregister("F5");
