@@ -24,9 +24,11 @@ function createWindow() {
     icon: "./src/components/images/icon.png",
   });
 
+  // Position the macOS traffic lights into a more natural position
+  mainWindow.setTrafficLightPosition({ x: 18, y: 18 });
+  
   mainWindow.loadFile("./src/index.html");
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+
   return mainWindow;
 }
 
@@ -36,14 +38,13 @@ function createWindow() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  const bigasswindow = createWindow();
+  const imagerWindow = createWindow();
   ipcMain.on("close", () => {
     app.quit();
   });
   ipcMain.on("minimize", () => {
-    bigasswindow.minimize();
+    imagerWindow.minimize();
   });
-
 
   app.on("browser-window-focus", function () {
     /*globalShortcut.register("CommandOrControl+R", () => {
@@ -88,9 +89,8 @@ app.whenReady().then(() => {
   });
 });
 
-// Quit when all windows are closed, except on macOS. There, it's common
-// for applications and their menu bar to stay active until the user quits
-// explicitly with Cmd + Q.
+// We want the program to close when all windows are closed,
+// even on macOS, overriding the default behaviour.
 app.on("window-all-closed", function () {
-  if (process.platform !== "darwin") app.quit();
+  app.quit();
 });
