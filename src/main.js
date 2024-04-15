@@ -27,6 +27,8 @@ function createWindow() {
   // Position the macOS traffic lights into a more natural position
   mainWindow.setTrafficLightPosition({ x: 18, y: 18 });
   
+  mainWindow.setTitle(require('./package.json').productName);
+
   mainWindow.loadFile("./src/index.html");
 
   return mainWindow;
