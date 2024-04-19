@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./components/css/main.css" />
+    <link rel="stylesheet" href="./components/css/flashing.css" />
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,34 +16,41 @@
   </head>
 
   <body>
-    <div class="drag"></div>
-
-    <header>
-      <div class="title">
-        <img src="./components/images/titlelogo.png" height="20px" class="titlelogo" />
-        &nbsp; &nbsp;
-        <p>AvdanOS Imager</p>
-      </div>
-      <div class="buttons">
-        <button id="minBtn" href="" class="btn">
-          <img src="./components/images/minimize.svg" height="15px" />
-        </button>
-        <button id="closeBtn" href="" class="btn">
-          <img src="./components/images/close.svg" height="16px" />
-        </button>
-      </div>
-    </header>
+     <!-- Drag region -->
+     <div class="drag" id="drag"></div>
+     <header>
+       <!-- The window controls -->
+       <div class="buttons" id="buttons">
+         <!-- Minimise button -->
+         <button id="minBtn" href="" class="btn">
+           <img src="./components/images/minimize.svg" height="15px" />
+         </button>
+         <!-- Close button -->
+         <button id="closeBtn" href="" class="btn">
+           <img src="./components/images/close.svg" height="16px" />
+         </button>
+       </div>
+       <!-- Window Title -->
+       <div class="title" id="title">
+         <img src="./components/images/titlelogo.png" height="20px" class="titlelogo" />
+         &nbsp; &nbsp;
+         <p>AvdanOS Imager</p>
+       </div>
+     </header>
     <main>
+      <!-- Very placeholder-y, will definitely get a rewrite -->
       <div class="avdanosflashingtext">
         <h1>Flashing..</h1>
       </div>
       <br />
       <div class="loadinggif">
+        <!-- Not sure what this was supposed to be, as there is no gif there? -->
         <img src="src/images/loading.gif" alt="loading.." width="186px" />
       </div>
     </main>
     <footer></footer>
     <script src="./components/js/renderer.js"></script>
-    <script src="./components/js/flashingrpc.js"></script>
+    <!-- Discord RPC Region, please put all scripts above -->
+    <script src="./components/js/RPC/flashing.js"></script>
   </body>
 </html>
