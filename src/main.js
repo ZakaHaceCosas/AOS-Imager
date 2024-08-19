@@ -86,6 +86,7 @@ app.whenReady().then(() => {
         globalShortcut.unregister("CommandOrControl+Plus");
         globalShortcut.unregister("CommandOrControl+-");
         globalShortcut.unregister("CommandOrControl+Shift+R");
+        globalShortcut.unregister("CommandOrControl+W");
     });
 
     app.on("activate", function () {
