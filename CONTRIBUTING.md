@@ -1,35 +1,33 @@
 # Contributing Guidelines
 
-## Basics 
+Thanks for contributing! To start your contribution, please follow the steps below:
 
-To start your contribution, please follow the steps below:
+First, create a fork of this repo and `git clone` it on your local machine.
 
-1. Create a fork of this repo.
-
-2. Git clone your fork to your machine:
 ```sh
-git clone https://url.to.your/github/fork.git
+git clone https://github.com/your-user/your-fork.git
 ```
 
-3. Use dev branch, commits targeting main will be ignored.
+Use the `dev` branch, as commits targeting main will be ignored.
+
 ```sh
 git checkout -b dev remotes/upstream/dev
 ```
 
-4. Make changes as you want.
+Make changes as you want. When you're done, commit your changes:
 
-5. Commit your changes:
 ```sh
 git commit -m "brief explanation of the changes"
 ```
 
 `Tip: You can setup code signing and add 0S to the commit command above to get a verified checkmark`
 
-6. Push your changes:
+Then, push your changes:
+
 ```sh
 git push
 ```
 
-7. Create pull request on GitHub.
+When you're ready, create a pull request on GitHub.
 
-## No Direct Commits!
+## No Direct Commits
