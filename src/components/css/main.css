@@ -54,30 +54,6 @@ header {
     left: 6px;
 }
 
-.buttons {
-    background: rgba(31, 31, 31, 0.8);
-    background-color: rgba(31, 31, 31, 0.8);
-    border-radius: 4px;
-    right: 10px;
-    top: 10px;
-    height: 5%;
-    width: 10%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.buttons button {
-    background-color: transparent;
-}
-
-.btn {
-    right: 6px;
-    border: none;
-    cursor: pointer;
-}
-
 footer {
     position: absolute;
     width: max-content;
@@ -133,9 +109,13 @@ body.is-loaded {
     opacity: 1;
 }
 
+/* TOP BAR */
+
+/* The "tab" */
+
 .title {
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 15px;
     background-color: rgba(31, 31, 31, 0.5);
     backdrop-filter: blur(20px);
     width: 25%;
@@ -150,6 +130,37 @@ body.is-loaded {
 .title p {
     font-size: smaller;
     font-weight: lighter;
+}
+
+/* The custom buttons for min and esc */
+
+.buttons {
+    background-color: rgba(31, 31, 31, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 6px;
+    right: 15px;
+    top: 15px;
+    height: 6%;
+    width: 12%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+button.btn {
+    flex: 1;
+    height: 100%; /* flex: 1 itself should be doing this but it isnt? weird */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 120ms linear;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .maintext {
