@@ -1,8 +1,8 @@
-.maindescription1{
+.maindescription1 {
     margin-bottom: -26px;
     font-size: 0.9rem;
 }
-.maindescription2{
+.maindescription2 {
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
@@ -10,74 +10,35 @@
     margin-bottom: -16px;
     font-size: 0.9rem;
 }
-.download{
+.toolSelectorButton {
     width: 100%;
     height: 15%;
     margin-bottom: 5px;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.4);
     border: 0px;
-
+    cursor: pointer;
     transition: background-color 0.15s ease-out;
 }
-.selectISO{
-    width: 100%;
-    height: 15%;
-    margin-bottom: 5px;
-    border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 0px;
-
-    transition: background-color 0.15s ease-out;
-}
-.eraseMedium{
-    width: 100%;
-    height: 15%;
-    border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 0px;
-
-    transition: background-color 0.15s ease-out;
-}
-.download:hover {
+.toolSelectorButton:hover {
     background-color: rgba(255, 46, 137, 0.25);
 
     transition: background-color 0.15s ease-in;
 }
-.selectISO:hover {
-    background-color: rgba(255, 46, 137, 0.25);
-
-    transition: background-color 0.15s ease-in;
-}
-.eraseMedium:hover {
-    background-color: rgba(255, 46, 137, 0.25);
-
-    transition: background-color 0.15s ease-in;
-}
-
-.download:focus {
+.toolSelectorButton:focus {
     background-color: rgba(255, 46, 137, 0.5);
 
     transition: background-color 0.15s ease-in;
 }
-.selectISO:focus {
-    background-color: rgba(255, 46, 137, 0.5);
-
-    transition: background-color 0.15s ease-in;
+.toolSelectorButton h1 {
+    margin-bottom: 0;
 }
-.eraseMedium:focus {
-    background-color: rgba(255, 46, 137, 0.5);
-
-    transition: background-color 0.15s ease-in;
-}
-
 .pg3btn {
-  color: whitesmoke;
-  font-size: xx-small !important;
-  object-fit: cover;
-  overflow: hidden;
+    color: whitesmoke;
+    font-size: xx-small !important;
+    object-fit: cover;
+    overflow: hidden;
 }
-
 .pg3btn p {
-  font-weight: normal;
+    font-weight: normal;
 }
