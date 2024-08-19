@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./components/css/main.css" />
-    <link rel="stylesheet" href="./components/css/downloading.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./components/css/main.css" />
+        <link rel="stylesheet" href="./components/css/downloading.css" />
 
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- END OF FONT -->
-    <script
-      src="https://kit.fontawesome.com/9b0286b6f2.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- END OF FONT -->
+        <script
+            src="https://kit.fontawesome.com/9b0286b6f2.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
 
-  <body>
-    <!-- Drag region -->
-    <div class="drag" id="drag"></div>
-    <header>
-      <!-- The window controls -->
-      <div class="buttons" id="buttons">
-        <!-- Minimise button -->
-        <button id="minBtn" href="" class="btn">
-          <img src="./components/images/minimize.svg" height="15px" />
-        </button>
-        <!-- Close button -->
-        <button id="closeBtn" href="" class="btn">
-          <img src="./components/images/close.svg" height="16px" />
-        </button>
-      </div>
-      <!-- Window Title -->
-      <div class="title" id="title">
-        <img
-          src="./components/images/titlelogo.png"
-          height="20px"
-          class="titlelogo"
-        />
-        &nbsp; &nbsp;
-        <p>AvdanOS Imager</p>
-      </div>
-    </header>
-    <main>
-      <!-- Very placeholder-y right now, will get heavy tweaking later -->
-      <div class="avdanosflashingtext">
-        <h1>Downloading...</h1>
-      </div>
-      <br />
-      <button onClick="setBar(40);">40%</button>
-      <button onClick="setBar(0);">Reset Bar</button>
-      <!-- The progress bar itself -->
-      <div id="bar-container">
-        <div id="bar"></div>
-      </div>
-    </main>
-    <footer></footer>
-    <script src="./components/js/renderer.js"></script>
-    <script src="./components/js/progress-bar.js"></script>
-    <!-- Discord RPC Region, please put all scripts above -->
-    <script src="./components/js/RPC/download.js"></script>
-  </body>
+    <body>
+        <!-- Drag region -->
+        <div class="drag" id="drag"></div>
+        <header>
+            <!-- The window controls -->
+            <div class="buttons" id="buttons">
+                <!-- Minimise button -->
+                <button id="minBtn" href="" class="btn">
+                    <img src="./components/images/minimize.svg" height="15px" />
+                </button>
+                <!-- Close button -->
+                <button id="closeBtn" href="" class="btn">
+                    <img src="./components/images/close.svg" height="16px" />
+                </button>
+            </div>
+            <!-- Window Title -->
+            <div class="title" id="title">
+                <img
+                    src="./components/images/icon.png"
+                    height="20px"
+                    class="titlelogo"
+                />
+                &nbsp; &nbsp;
+                <p>AvdanOS Imager</p>
+            </div>
+        </header>
+        <main>
+            <!-- Very placeholder-y right now, will get heavy tweaking later -->
+            <div class="avdanosflashingtext">
+                <h1>Downloading...</h1>
+            </div>
+            <br />
+            <button onClick="setBar(40);">40%</button>
+            <button onClick="setBar(0);">Reset Bar</button>
+            <!-- The progress bar itself -->
+            <div id="bar-container">
+                <div id="bar"></div>
+            </div>
+        </main>
+        <footer></footer>
+        <script src="./components/js/renderer.js"></script>
+        <script src="./components/js/progress-bar.js"></script>
+        <!-- Discord RPC Region, please put all scripts above -->
+        <script src="./components/js/RPC/download.js"></script>
+    </body>
 </html>

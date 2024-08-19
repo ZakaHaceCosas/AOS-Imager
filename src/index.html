@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./components/css/main.css" />
-    <link rel="stylesheet" href="./components/css/index.css" />
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- END OF FONT -->
-    <script
-      src="https://kit.fontawesome.com/9b0286b6f2.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./components/css/main.css" />
+        <link rel="stylesheet" href="./components/css/index.css" />
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- END OF FONT -->
+        <script
+            src="https://kit.fontawesome.com/9b0286b6f2.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
 
-  <body>
-    <!-- Drag region -->
-    <div class="drag" id="drag"></div>
-    <header>
-      <!-- The window controls -->
-      <div class="buttons" id="buttons">
-        <!-- Minimise button -->
-        <button id="minBtn" href="" class="btn">
-          <img src="./components/images/minimize.svg" height="15px" />
-        </button>
-        <!-- Close button -->
-        <button id="closeBtn" href="" class="btn">
-          <img src="./components/images/close.svg" height="16px" />
-        </button>
-      </div>
-      <!-- Window Title -->
-      <div class="title" id="title">
-        <img
-          src="./components/images/titlelogo.png"
-          height="20px"
-          class="titlelogo"
-        />
-        &nbsp; &nbsp;
-        <p>AvdanOS Imager</p>
-      </div>
-    </header>
-    <main>
-      <!-- The full screen AvdanOS logo, very important for branding -->
-      <div class="avdanostxtlogo">
-        <img
-          src="./components/images/logofullwhite.png"
-          class="logomaintxt"
-          width="354"
-          alt="AvdanOS"
-        />
-      </div>
-      <!-- The world's best wordmark -->
-      <div class="avdanostxtlogodescription">
-        <p>Your PC but Even Better!</p>
-      </div>
-    </main>
-    <footer>
-      <div class="right">
-        <button
-          class="nextBtn"
-          id="nextBtn"
-          onclick="window.location.replace('licensepage.html')"
-        >
-          &nbsp;&nbsp;Next&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i
-          >&nbsp;&nbsp;
-        </button>
-      </div>
-    </footer>
-    <script src="./components/js/renderer.js"></script>
-    <!-- Discord RPC Region, please put all scripts above -->
-    <script src="./components/js/RPC/index.js"></script>
-  </body>
+    <body>
+        <!-- Drag region -->
+        <div class="drag" id="drag"></div>
+        <header>
+            <!-- The window controls -->
+            <div class="buttons" id="buttons">
+                <!-- Minimise button -->
+                <button id="minBtn" href="" class="btn">
+                    <img src="./components/images/minimize.svg" height="15px" />
+                </button>
+                <!-- Close button -->
+                <button id="closeBtn" href="" class="btn">
+                    <img src="./components/images/close.svg" height="16px" />
+                </button>
+            </div>
+            <!-- Window Title -->
+            <div class="title" id="title">
+                <img
+                    src="./components/images/icon.png"
+                    height="20px"
+                    class="titlelogo"
+                />
+                &nbsp;
+                <p>AvdanOS Imager</p>
+            </div>
+        </header>
+        <main>
+            <!-- The full screen AvdanOS logo, very important for branding -->
+            <div class="avdanostxtlogo">
+                <img
+                    src="./components/images/logofullwhite.png"
+                    class="logomaintxt"
+                    width="354"
+                    alt="AvdanOS"
+                />
+            </div>
+            <!-- The world's best wordmark -->
+            <div class="avdanostxtlogodescription">
+                <p>Your PC but Even Better!</p>
+            </div>
+        </main>
+        <footer>
+            <div class="right">
+                <button
+                    class="nextBtn"
+                    id="nextBtn"
+                    onclick="window.location.replace('licensepage.html')"
+                >
+                    &nbsp;&nbsp;Next&nbsp;&nbsp;<i
+                        class="fa-solid fa-arrow-right"
+                    ></i
+                    >&nbsp;&nbsp;
+                </button>
+            </div>
+        </footer>
+        <script src="./components/js/renderer.js"></script>
+        <!-- Discord RPC Region, please put all scripts above -->
+        <script src="./components/js/RPC/index.js"></script>
+    </body>
 </html>

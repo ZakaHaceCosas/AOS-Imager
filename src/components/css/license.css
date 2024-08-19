@@ -1,10 +1,11 @@
-html, body {
+html,
+body {
     font-family: Inter, sans-serif;
     background: rgb(13, 13, 13);
     color: white;
 }
 
-a:link { 
+a:link {
     color: hsla(334, 100%, 45%, 1);
     text-decoration: none;
 }

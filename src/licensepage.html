@@ -1,66 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./components/css/main.css" />
+        <link rel="stylesheet" href="./components/css/licensepage.css" />
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- END OF FONT -->
+        <script
+            src="https://kit.fontawesome.com/9b0286b6f2.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./components/css/main.css">
-  <link rel="stylesheet" href="./components/css/licensepage.css" />
-  <!-- FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- END OF FONT -->
-  <script src="https://kit.fontawesome.com/9b0286b6f2.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-   <!-- Drag region -->
-   <div class="drag" id="drag"></div>
-   <header>
-     <!-- The window controls -->
-     <div class="buttons" id="buttons">
-       <!-- Minimise button -->
-       <button id="minBtn" href="" class="btn">
-         <img src="./components/images/minimize.svg" height="15px" />
-       </button>
-       <!-- Close button -->
-       <button id="closeBtn" href="" class="btn">
-         <img src="./components/images/close.svg" height="16px" />
-       </button>
-     </div>
-     <!-- Window Title -->
-     <div class="title" id="title">
-       <img src="./components/images/titlelogo.png" height="20px" class="titlelogo" />
-       &nbsp; &nbsp;
-       <p>AvdanOS Imager</p>
-     </div>
-   </header>
-  <main>
-    <!-- Page Title -->
-    <div class="licensetxt"><h1>License</h1></div>
-    <div id="license">
-      <!-- Iframe containing the licensing information -->
-      <p>
-        <iframe src="license.html" class="licenseiframe" width="640px" height="250px" frameborder=0 style="border-radius: 6px;"></iframe>
-      </p>
-    </div>
-  </main>
-  <footer>
-    <div class="left">
-      <button 
-        class="disagree" 
-        id="disagreeBtn"
-        onclick="window.location.replace('index.html')">
-          <i class="fa-solid fa-xmark"></i>&nbsp;&nbsp;Disagree
-        </button>
-    </div>
-    <div class="right">
-      <button class="nextBtn" id="nextBtn" onclick="window.location.replace('toolselector.html')">Agree&nbsp;&nbsp;<i class="fa-solid fa-check"></i></i></button>
-    </div>
-  </footer>
-  <script src="./components/js/renderer.js"></script>
-  <!-- Discord RPC Region, please put all scripts above -->
-  <script src="./components/js/RPC/license.js"></script>
-</body>
-
+    <body>
+        <!-- Drag region -->
+        <div class="drag" id="drag"></div>
+        <header>
+            <!-- The window controls -->
+            <div class="buttons" id="buttons">
+                <!-- Minimise button -->
+                <button id="minBtn" href="" class="btn">
+                    <img src="./components/images/minimize.svg" height="15px" />
+                </button>
+                <!-- Close button -->
+                <button id="closeBtn" href="" class="btn">
+                    <img src="./components/images/close.svg" height="16px" />
+                </button>
+            </div>
+            <!-- Window Title -->
+            <div class="title" id="title">
+                <img
+                    src="./components/images/icon.png"
+                    height="20px"
+                    class="titlelogo"
+                />
+                &nbsp; &nbsp;
+                <p>AvdanOS Imager</p>
+            </div>
+        </header>
+        <main>
+            <!-- Page Title -->
+            <div class="licensetxt"><h1>License</h1></div>
+            <div id="license">
+                <!-- Iframe containing the licensing information -->
+                <p>
+                    <iframe
+                        src="license.html"
+                        class="licenseiframe"
+                        width="640px"
+                        height="250px"
+                        frameborder="0"
+                        style="border-radius: 6px"
+                    ></iframe>
+                </p>
+            </div>
+        </main>
+        <footer>
+            <div class="left">
+                <button
+                    class="disagree"
+                    id="disagreeBtn"
+                    onclick="window.location.replace('index.html')"
+                >
+                    <i class="fa-solid fa-xmark"></i>&nbsp;&nbsp;Disagree
+                </button>
+            </div>
+            <div class="right">
+                <button
+                    class="nextBtn"
+                    id="nextBtn"
+                    onclick="window.location.replace('toolselector.html')"
+                >
+                    Agree&nbsp;&nbsp;<i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+        </footer>
+        <script src="./components/js/renderer.js"></script>
+        <!-- Discord RPC Region, please put all scripts above -->
+        <script src="./components/js/RPC/license.js"></script>
+    </body>
 </html>

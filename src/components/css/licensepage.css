@@ -1,17 +1,17 @@
 .licensetxt {
-  font-size: x-large;
-  margin-bottom: -20px;
+    font-size: x-large;
+    margin-bottom: -20px;
 }
 
 .disagree {
-  right: 345px !important;
+    right: 345px !important;
 }
 
 .licenseiframe {
     opacity: 0.6;
     scrollbar-width: thin;
 }
- 
+
 .licenseiframe::-webkit-scrollbar {
-background: rgba(31, 31, 31, 0.8);
+    background: rgba(31, 31, 31, 0.8);
 }
