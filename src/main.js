@@ -7,8 +7,8 @@ function createWindow() {
     // Create the application window with some spicey attributes that
     // I'm not gonna comment. :D
     const mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 900,
+        height: 650,
         titleBarStyle: "hidden",
         maximizable: false,
         resizable: false,
