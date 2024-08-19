@@ -1,8 +1,8 @@
 {
     "name": "avdanosimager",
     "productName": "AvdanOS Imager",
-    "description": "A Balena-Etcher alternative for the AvdanOS Operating System",
-    "keywords": [],
+    "description": "A Balena-Etcher alternative for AvdanOS",
+    "private": "true",
     "main": "./src/main.js",
     "version": "0.0.1",
     "author": "AvdanOS",
