@@ -20,11 +20,11 @@ Legend:
 
 ## Getting Started
 
-Make sure you have NodeJS 14 or later installed.
+Make sure you have NodeJS 14 or later installed, and either the `npm` or `pnpm` package manager- (being `pnpm` the recommended option).
 
 ```bash
-npm install
-npm run start
+pnpm install
+pnpm run start
 ```
 
 You should see the Imager window appear after.
