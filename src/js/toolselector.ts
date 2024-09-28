@@ -1,4 +1,4 @@
-const flashButton: HTMLElement | null = document.getElementById("flashbtn");
+const flashButton: HTMLElement | null = document.getElementById("flashButton");
 const toolButtons: NodeListOf<HTMLElement> = document.querySelectorAll(".pg3btn");
 
 if (flashButton && toolButtons) {

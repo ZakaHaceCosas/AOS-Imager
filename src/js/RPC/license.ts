@@ -5,7 +5,7 @@ async function setActivity() {
         details: "Installing AvdanOS...",
         state: "Accepting the devil's deal..",
         startTimestamp,
-        largeImageKey: "defaultpfp",
+        largeImageKey: "defaultProfilePicture",
         largeImageText: "Installing AvdanOS",
         instance: false,
     });

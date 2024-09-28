@@ -5,7 +5,7 @@ async function setActivity() {
         details: "AvdanOS Imager",
         state: "Your PC, but even better!",
         startTimestamp,
-        largeImageKey: "defaultpfp",
+        largeImageKey: "defaultProfilePicture",
         largeImageText: "Installing AvdanOS",
         instance: false,
     });
