@@ -3,7 +3,7 @@ const { app, ipcMain, BrowserWindow, globalShortcut } = require("electron");
 const os = require("os");
 const path = require("path");
 
-function createWindow(): BrowserWindow {
+function createWindow() {
     // Create the application window with some spicey attributes that
     // I'm not gonna comment. :D
     const mainWindow = new BrowserWindow({
