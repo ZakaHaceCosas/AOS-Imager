@@ -7,7 +7,7 @@
     "version": "0.0.1",
     "author": "AvdanOS",
     "scripts": {
-        "start": "electron ."
+        "start": "tsc && electron ."
     },
     "dependencies": {
         "discord-rpc": "^4.0.1",

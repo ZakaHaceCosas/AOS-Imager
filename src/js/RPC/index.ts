@@ -1,13 +1,9 @@
-const DiscordRPC = require("discord-rpc");
-
-const clientId = "1012098922652631062";
-const rpc = new DiscordRPC.Client({ transport: "ipc" });
-const startTimestamp = new Date();
+import { rpc, startTimestamp, clientId } from "./rpc";
 
 async function setActivity() {
     rpc.setActivity({
-        details: "Installing AvdanOS...",
-        state: "Accepting the devil's deal..",
+        details: "AvdanOS Imager",
+        state: "Your PC, but even better!",
         startTimestamp,
         largeImageKey: "defaultpfp",
         largeImageText: "Installing AvdanOS",

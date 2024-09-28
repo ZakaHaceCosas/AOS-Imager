@@ -1,13 +1,9 @@
-const DiscordRPC = require("discord-rpc");
-
-const clientId = "1012098922652631062";
-const rpc = new DiscordRPC.Client({ transport: "ipc" });
-const startTimestamp = new Date();
+import { rpc, startTimestamp, clientId } from "./rpc";
 
 async function setActivity() {
     rpc.setActivity({
         details: "Installing AvdanOS...",
-        state: "Making the drive bootable..",
+        state: "Downloading AvdanOS..",
         startTimestamp,
         largeImageKey: "defaultpfp",
         largeImageText: "Installing AvdanOS",
