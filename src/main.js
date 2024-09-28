@@ -3,7 +3,7 @@ const { app, ipcMain, BrowserWindow, globalShortcut } = require("electron");
 const os = require("os");
 const path = require("path");
 
-function createWindow() {
+function createWindow(): BrowserWindow {
     // Create the application window with some spicey attributes that
     // I'm not gonna comment. :D
     const mainWindow = new BrowserWindow({
@@ -13,19 +13,18 @@ function createWindow() {
         maximizable: false,
         resizable: false,
         transparent: true,
-        icon: path.join(__dirname, "./components/images/logo.ico"),
+        icon: path.join(__dirname, "./images/logo.ico"),
         frame: false,
         fullscreenable: false,
         webPreferences: {
-            preload: path.join(__dirname, "./components/js/preload.js"),
+            preload: path.join(__dirname, "./js/preload.js"),
             nodeIntegration: true,
             contextIsolation: false,
             enableRemoteModule: true,
         },
-        icon: "./components/images/icon.png",
     });
 
-    if (os.platform === "darwin") {
+    if (os.platform() === "darwin") {
         // Position the macOS traffic lights into a more natural position
         mainWindow.setTrafficLightPosition({ x: 18, y: 18 });
     }
@@ -35,7 +34,7 @@ function createWindow() {
     return mainWindow;
 }
 
-// Adding the IPC hook for window manipulation.
+// Adding the IPC hook for window manipulation
 app.whenReady().then(() => {
     const imagerWindow = createWindow();
     ipcMain.on("close", () => {
@@ -45,13 +44,13 @@ app.whenReady().then(() => {
         imagerWindow.minimize();
     });
 
-    // Blocking keybinds which shouldn't be triggered by the end user.
+    // Blocking keybinds which shouldn't be triggered by the end user
     // Works by re-registering the keybinds to console output
-    // instead of the expected action.
-    app.on("browser-window-focus", function () {
+    // instead of the expected action
+    app.on("browser-window-focus", () => {
         /*globalShortcut.register("CommandOrControl+R", () => {
-      console.log("CommandOrControl+R is pressed: Reloading disabled");
-    });*/
+            console.log("CommandOrControl+R is pressed: Reloading disabled");
+        });*/
         globalShortcut.register("F5", () => {
             console.log("F5 is pressed: Reloading is disabled");
         });
@@ -72,15 +71,13 @@ app.whenReady().then(() => {
             );
         });
         /*globalShortcut.register("CommandOrControl+Shift+I", () => {
-      console.log(
-        "CommandOrControl+Shift+I is pressed: The development console is disabled"
-      );
-    });*/
+            console.log("CommandOrControl+Shift+I is pressed: The development console is disabled");
+            });*/
     });
 
     // When the app loses focus, we want to re-register the keybinds back,
     // so they perform the expected actions again.
-    app.on("browser-window-blur", function () {
+    app.on("browser-window-blur", () => {
         /*globalShortcut.unregister('CommandOrControl+R');*/
         globalShortcut.unregister("F5");
         globalShortcut.unregister("CommandOrControl+Plus");
@@ -89,7 +86,7 @@ app.whenReady().then(() => {
         globalShortcut.unregister("CommandOrControl+W");
     });
 
-    app.on("activate", function () {
+    app.on("activate", () => {
         // On macOS it's common to re-create a window in the app when the
         // dock icon is clicked and there are no other windows open.
         if (BrowserWindow.getAllWindows().length === 0) createWindow();
@@ -97,7 +94,7 @@ app.whenReady().then(() => {
 });
 
 // We want the program to close when all windows are closed,
-// even on macOS, overriding the default behaviour.
-app.on("window-all-closed", function () {
+// even on macOS, overriding the default behavior.
+app.on("window-all-closed", () => {
     app.quit();
 });
