@@ -1,13 +1,17 @@
 {
     "compilerOptions": {
-        "target": "es6",
-        "module": "commonjs",
+        "target": "ES6",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
         "outDir": "./src",
         "rootDir": "./src",
         "strict": true,
         "esModuleInterop": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "paths": {
+            "electron": ["./node_modules/electron"]
+        }
     },
-    "include": ["src/*", "src/js/*"],
+    "include": ["src/*", "src/js/*", "src/js/RPC/*"],
     "exclude": []
 }

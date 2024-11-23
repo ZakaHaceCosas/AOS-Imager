@@ -16,18 +16,18 @@ function createWindow() {
         icon: path.join(__dirname, "./images/logo.ico"),
         frame: false,
         fullscreenable: false,
+        trafficLightPosition: { x: 18, y: 18 },
         webPreferences: {
             preload: path.join(__dirname, "./js/preload.js"),
             nodeIntegration: true,
             contextIsolation: false,
-            enableRemoteModule: true,
         },
     });
 
-    if (os.platform() === "darwin") {
+    /* if (os.platform() === "darwin") {
         // Position the macOS traffic lights into a more natural position
         mainWindow.setTrafficLightPosition({ x: 18, y: 18 });
-    }
+    } */
 
     mainWindow.setTitle(require("../package.json").productName);
     mainWindow.loadFile("./src/index.html");
