@@ -18,5 +18,11 @@
         "@types/node": "^22.13.1",
         "electron": "^32.3.0",
         "typescript": "^5.7.3"
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "electron",
+            "register-scheme"
+        ]
     }
 }
